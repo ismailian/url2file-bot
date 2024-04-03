@@ -1,0 +1,22 @@
+{
+  "name": "ismailian/telebot",
+  "description": "This library handles Telegram Bot webhook events",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "TeleBot\\System\\": "System/",
+      "TeleBot\\App\\": "App/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Ismail Aatif",
+      "email": "techcyber598@gmail.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^7.7",
+    "ext-mbstring": "*"
+  }
+}

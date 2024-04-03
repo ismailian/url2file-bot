@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+
+    RewriteEngine on
+    RewriteBase /
+    Options -Indexes
+
+    # public resources:
+    RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f
+    RewriteRule ^ public%{REQUEST_URI} [L]
+
+    # Rewrite rules:
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^ main.php [L,QSA]
+
+</IfModule>
