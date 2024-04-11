@@ -67,7 +67,7 @@ class Urls extends BaseEvent
     #[CallbackQuery('type:image')]
     public function toImage(IncomingCallbackQuery $query): void
     {
-        if (empty($query('type:pdf'))) return;
+        if (empty($query('type:image'))) return;
 
         $this->telegram->deleteMessage($query->messageId);
         $this->telegram->sendMessage(('Hold on! we are processing your url..'));
